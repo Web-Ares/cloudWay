@@ -1,0 +1,103 @@
+/* --------------- services --------------- */
+.services {
+  font-family: $font-light;
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 15px;
+    color: #e65f25;
+  }
+
+  strong {
+    display: block;
+    font-size: 15px;
+  }
+
+  ul {
+    font-size: 12px;
+    line-height: 1.2em;
+
+    li {
+      position: relative;
+      padding: 5px 0 5px 32px;
+
+      &:before {
+        display: block;
+        @include absoluteCenterY();
+        left: 0;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: #22aae2;
+        content: '';
+      }
+
+      &:after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 2px;
+        width: 8px;
+        height: 8px;
+        margin-top: -8px;
+        transform: rotate(45deg);
+        border: 1px solid #fff;
+        clip: rect(2px, auto, auto, 6px);
+        content: '';
+      }
+    }
+  }
+}
+
+@media (min-width: $small) {
+  .services {
+
+  }
+}
+
+@media (min-width: $medium) {
+  .services {
+    padding: 0 calc(50% - 590px);
+
+    h2 {
+      font-size: 48px;
+    }
+
+    h3,
+    strong {
+      font-size: 30px;
+    }
+
+    ul {
+      font-size: 24px;
+
+      li {
+        padding: 5px 0 5px 64px;
+
+        &:before {
+          width: 35px;
+          height: 35px;
+        }
+
+        &:after {
+          left: 6px;
+          width: 16px;
+          height: 16px;
+          margin-top: -16px;
+          border: 2px solid #fff;
+          clip: rect(4px, auto, auto, 12px);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $large) {
+  .services {
+
+  }
+}
+/* --------------- /services --------------- */

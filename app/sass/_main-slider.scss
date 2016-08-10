@@ -1,0 +1,118 @@
+/* --------------- main-slider --------------- */
+.main-slider {
+  position: relative;
+
+  .main-slider__item {
+    display: block;
+    position: relative;
+    padding: 20px 20px 50px;
+    z-index: 2;
+    color: #fff;
+    font-size: 16px;
+    @include font-light();
+
+    p {
+      margin-bottom: 47px;
+      line-height: 1.2em;
+    }
+  }
+
+  .main-slider__title {
+    display: block;
+    margin-bottom: 36px;
+    color: #fff;
+    font-size: 1.875em;
+    line-height: 1.1em;
+  }
+
+  .read-more { margin-left: 32px; }
+
+  .swiper-slide {
+    background-size: cover;
+    background-position: center;
+
+    &:before {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,.75);
+      content: '';
+    }
+  }
+
+  .swiper-pagination {
+    @include absoluteCenterX();
+    bottom: 10px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+    margin: 0 6px;
+    background: #fff;
+    opacity: 1;
+
+    &-active { background: #22aae2; }
+  }
+}
+
+@media (min-width: $small) {
+  .main-slider {
+    min-height: 350px;
+    padding-bottom: 37%;
+
+    .main-slider__wrap {
+      @include absoluteCenterX();
+      top: 0;
+      height: 100%;
+      width: 100%;
+      max-width: 1140px;
+    }
+
+    .main-slider__item {
+      @include absoluteCenterY();
+      right: 10px;
+      left: 10px;
+      width: auto;
+      height: auto;
+      max-height: 90%;
+      max-width: 620px;
+      padding: 37px 33px;
+      background: rgba(0,0,0,.75);
+    }
+
+    .read-more { margin-left: 62px; }
+
+    .swiper-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100% !important;
+    }
+
+    .swiper-slide {
+      display: flex;
+      align-content: center;
+
+      &:before { display: none; }
+    }
+  }
+}
+
+@media (min-width: $medium) {
+  .main-slider {
+
+  }
+}
+
+@media (min-width: $large) {
+  .main-slider {
+
+    .swiper-pagination { bottom: 27px; }
+  }
+}
+/* --------------- /main-slider --------------- */

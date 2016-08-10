@@ -1,14 +1,11 @@
 /* --------------- logo --------------- */
 .logo {
   @include absoluteCenter();
+  max-width: 50%;
 
-  &_footer {
-    display: inline-block;
-    position: relative;
-    top: auto;
-    left: auto;
-    margin-bottom: 14px;
-    transform: translate(0,0);
+  img {
+    display: block;
+    max-width: 100%;
   }
 }
 
@@ -23,10 +20,8 @@
     position: relative;
     top: auto;
     left: auto;
-    margin-left: 16px;
+    width: 261px;
     transform: translate(0, 0);
-
-    &_footer { margin-left: 0; }
   }
 }
 

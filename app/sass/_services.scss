@@ -2,52 +2,93 @@
 .services {
   font-family: $font-light;
 
-  h2 {
-    font-size: 24px;
-  }
+  .services__info {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    background: #fff;
 
-  h3 {
-    font-size: 15px;
-    color: #e65f25;
-  }
+    h2 {
+      font-size: 24px;
+    }
 
-  strong {
-    display: block;
-    font-size: 15px;
-  }
+    h3 {
+      font-size: 15px;
+      color: #e65f25;
+    }
 
-  ul {
-    font-size: 12px;
-    line-height: 1.2em;
+    strong {
+      display: block;
+      font-size: 15px;
+    }
 
-    li {
-      position: relative;
-      padding: 5px 0 5px 32px;
+    ul {
+      font-size: 12px;
+      line-height: 1.2em;
 
-      &:before {
-        display: block;
-        @include absoluteCenterY();
-        left: 0;
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        background: #22aae2;
-        content: '';
+      li {
+        position: relative;
+        padding: 5px 0 5px 32px;
+
+        &:before {
+          display: block;
+          @include absoluteCenterY();
+          left: 0;
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background: #22aae2;
+          content: '';
+        }
+
+        &:after {
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 2px;
+          width: 8px;
+          height: 8px;
+          margin-top: -8px;
+          transform: rotate(45deg);
+          border: 1px solid #fff;
+          clip: rect(2px, auto, auto, 6px);
+          content: '';
+        }
       }
+    }
+  }
 
-      &:after {
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 2px;
-        width: 8px;
-        height: 8px;
-        margin-top: -8px;
-        transform: rotate(45deg);
-        border: 1px solid #fff;
-        clip: rect(2px, auto, auto, 6px);
-        content: '';
-      }
+  .services__form {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    background: #eeeeee;
+
+    h2 {
+      margin-bottom: 10px;
+      font-family: $font-semibold;
+      font-size: 15px;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    fieldset {
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+
+    input {
+      width: 100%;
+      height: 20px;
+      border: 1px solid #323232;
+      background: #fff;
+      box-shadow: inset 0 1px 0 #e3e3e3;
     }
   }
 }
@@ -60,36 +101,77 @@
 
 @media (min-width: $medium) {
   .services {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
     padding: 0 calc(50% - 590px);
 
-    h2 {
-      font-size: 48px;
+    &:after {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 50%;
+      height: 100%;
+      z-index: 1;
+      background: #eeeeee;
+      content: '';
     }
 
-    h3,
-    strong {
-      font-size: 30px;
+    .services__info {
+      width: calc(100% - 400px);
+      padding: 30px 0;
+
+      h2 {
+        font-size: 48px;
+      }
+
+      h3,
+      strong {
+        font-size: 30px;
+      }
+
+      ul {
+        font-size: 24px;
+
+        li {
+          padding: 5px 0 5px 64px;
+
+          &:before {
+            width: 35px;
+            height: 35px;
+          }
+
+          &:after {
+            left: 6px;
+            width: 16px;
+            height: 16px;
+            margin-top: -16px;
+            border: 2px solid #fff;
+            clip: rect(4px, auto, auto, 12px);
+          }
+        }
+      }
     }
 
-    ul {
-      font-size: 24px;
+    .services__form {
+      width: 380px;
+      padding: 35px 50px;
 
-      li {
-        padding: 5px 0 5px 64px;
+      h2 {
+        font-size: 30px;
+      }
 
-        &:before {
-          width: 35px;
-          height: 35px;
-        }
+      fieldset {
 
-        &:after {
-          left: 6px;
-          width: 16px;
-          height: 16px;
-          margin-top: -16px;
-          border: 2px solid #fff;
-          clip: rect(4px, auto, auto, 12px);
-        }
+      }
+
+      label {
+
+      }
+
+      input {
+        height: 40px;
       }
     }
   }

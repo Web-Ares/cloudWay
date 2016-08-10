@@ -48,13 +48,17 @@ body {
   }
 
   .site__footer {
-	color: #323232;
-	font-size: 16px;
-	@include font-light();
-
-	.site__footer-wrap {
 	  padding: 20px;
-	}
+	  background: #eeeeee;
+	  text-align: center;
+	  color: #323232;
+	  font-size: 14px;
+	  @include font-light();
+
+	  span {
+		  display: block;
+		  padding: 10px;
+	  }
 
   }
 
@@ -115,11 +119,13 @@ body {
 	}
 
 	.site__footer {
-
-	  .site__footer-wrap {
 		display: flex;
 		justify-content: space-between;
-	  }
+		align-items: center;
+		min-height: 170px;
+		padding: 20px calc(50% - 590px);
+		font-size: 18px;
+		text-align: left;
 	}
 
 	.site__subtitle {

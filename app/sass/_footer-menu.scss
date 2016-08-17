@@ -35,7 +35,9 @@
 
     .footer-menu__item {
       padding: 0;
-      margin: 3px 19px;
+      margin: 3px 16px;
+
+      &:first-child { margin-left: 0; }
     }
   }
 }

@@ -11,17 +11,8 @@ $(function(){
             new MainSlider( $(this) );
         } );
 
-        $( '.nice-scroll' ).each( function() {
-            $( this ).niceScroll({
-                cursorcolor:"#f16622",
-                background: "#eeeeee",
-                cursoropacitymin: "1",
-                cursorborderradius: "0",
-                cursorborder: "none",
-                cursorwidth: "5px",
-                enablemousewheel: true
-            } );
-
+        $( '.main-slider__item' ).each( function() {
+            new NiceScroll( $( this ) );
         } );
 
         $( '.tabs' ).each( function() {
@@ -163,6 +154,45 @@ $(function(){
             },
             _init = function() {
                 _addEvents();
+            };
+
+        //public properties
+
+        //public methods
+
+        _init();
+    };
+
+    var NiceScroll = function(obj) {
+
+        //private properties
+        var _obj = obj;
+
+        //private methods
+        var _addEvents = function() {
+
+                $( window ).on( {
+                    'resize': function() {
+
+                        _obj.getNiceScroll().resize();
+                    }
+                } );
+
+            },
+            _addScroll = function() {
+                _obj.niceScroll( {
+                    cursorcolor:"#eeeeee",
+                    railalign: 'right',
+                    cursorwidth: 4,
+                    cursorborder: 0,
+                    cursorborderradius: 0,
+                    autohidemode: false,
+                    railpadding: { top: 0, right: 0, left: 0, bottom: 0 }
+                } );
+            },
+            _init = function () {
+                _addEvents();
+                _addScroll();
             };
 
         //public properties

@@ -9,26 +9,32 @@
     background: #fff;
 
     h2 {
+      margin-bottom: 15px;
       font-size: 24px;
+      font-weight: 400;
     }
 
     h3 {
+      margin-bottom: 10px;
       font-size: 15px;
       color: #e65f25;
+      font-weight: 400;
     }
 
     strong {
+      margin-bottom: 10px;
       display: block;
       font-size: 15px;
     }
 
     ul {
+      padding: 10px 0;
       font-size: 12px;
       line-height: 1.2em;
 
       li {
         position: relative;
-        padding: 5px 0 5px 32px;
+        padding: 10px 0 10px 32px;
 
         &:before {
           display: block;
@@ -65,41 +71,44 @@
     background: #eeeeee;
 
     h2 {
-      margin-bottom: 10px;
+      margin-bottom: 3px;
       font-family: $font-semibold;
       font-size: 15px;
+      font-weight: 400;
     }
 
     p {
-      margin-bottom: 15px;
+      margin-bottom: 17px;
     }
 
     fieldset {
-      margin-bottom: 10px;
+      margin-bottom: 9px;
     }
 
     label {
       display: inline-block;
-      margin-bottom: 5px;
+      margin-bottom: 7px;
     }
 
     input {
       width: 100%;
-      height: 20px;
+      height: 30px;
+      padding: 0 10px;
       border: 1px solid #323232;
       background: #fff;
       box-shadow: inset 0 1px 0 #e3e3e3;
+    }
+
+    button[type=submit] {
+      width: 100%;
+      padding: 5px 10px;
+      margin: 20px 0 9px;
+      box-shadow: inset 0 1px 1px rgba(0,0,0,.3);
     }
   }
 }
 
 @media (min-width: $small) {
-  .services {
-
-  }
-}
-
-@media (min-width: $medium) {
   .services {
     position: relative;
     display: flex;
@@ -119,23 +128,39 @@
     }
 
     .services__info {
+      width: 60%;
+    }
+
+    .services__form {
+      width: 40%;
+    }
+  }
+}
+
+@media (min-width: $medium) {
+  .services {
+
+    .services__info {
       width: calc(100% - 400px);
-      padding: 30px 0;
+      padding: 22px 0;
 
       h2 {
+        margin-bottom: 22px;
         font-size: 48px;
       }
 
       h3,
       strong {
+        margin-bottom: 7px;
         font-size: 30px;
       }
 
       ul {
+        padding: 21px 0;
         font-size: 24px;
 
         li {
-          padding: 5px 0 5px 64px;
+          padding: 13px 0 13px 65px;
 
           &:before {
             width: 35px;
@@ -156,7 +181,7 @@
 
     .services__form {
       width: 380px;
-      padding: 35px 50px;
+      padding: 30px;
 
       h2 {
         font-size: 30px;

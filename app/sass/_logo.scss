@@ -1,7 +1,8 @@
 /* --------------- logo --------------- */
 .logo {
+  display: block;
   @include absoluteCenter();
-  max-width: 50%;
+  max-width: 200px;
 
   img {
     display: block;
@@ -21,6 +22,7 @@
     top: auto;
     left: auto;
     width: 261px;
+    max-width: 100%;
     transform: translate(0, 0);
   }
 }

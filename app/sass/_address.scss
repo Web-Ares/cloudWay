@@ -1,0 +1,150 @@
+/* --------------- address --------------- */
+.address {
+  padding: 0 0 20px;
+  @include font-light();
+  font-size: 16px;
+  color: #323232;
+
+  .address__phone,
+  .address__mail,
+  .address__location {
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      transform-origin: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-color: #f16622;
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+      transition: all .4s ease-in-out;
+    }
+
+    &:before { transform: rotateX(0deg) rotateY(0deg); }
+
+    &:after { transform: rotateY(-180deg); }
+
+    &:hover {
+
+      &:before {
+        z-index: 900;
+        transform: rotateY(180deg);
+      }
+
+      &:after {
+        z-index: 1000;
+        transform: rotateX(0deg) rotateY(0deg);
+      }
+
+    }
+  }
+
+  .address__phone {
+    &:before,
+    &:after { background-image: url("../img/phone-icon.png"); }
+  }
+
+  .address__mail {
+    &:before,
+    &:after { background-image: url("../img/email-icon.png"); }
+  }
+
+  .address__location {
+    &:before,
+    &:after { background-image: url("../img/location-icon.png"); }
+  }
+
+  .address__item {
+    position: relative;
+    padding: 0 0 16px 44px;
+    line-height: 1.2em;
+    perspective: 600px;
+
+    svg ,
+    img {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+      transition: transform .4s ease-in-out;
+
+      &.face {
+        transform: rotateX(0deg) rotateY(0deg);
+      }
+
+      &.back {
+        transform: rotateY(-180deg);
+      }
+    }
+
+    a,
+    a:visited {
+      color: #323232;
+
+      &:hover {
+        text-decoration: underline;
+
+        svg,
+        img {
+
+          &.face {
+            z-index: 900;
+            transform: rotateY(180deg);
+          }
+
+          &.back {
+            z-index: 1000;
+            transform: rotateX(0deg) rotateY(0deg);
+          }
+        }
+      }
+    }
+
+    span { display: block; }
+  }
+
+  .address__title {
+    display: block;
+    margin-bottom: 20px;
+    font-family: $font-light;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5em;
+    color: #f16622;
+  }
+
+  .address__wrap {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: $small) {
+  .address {
+    width: 382px;
+  }
+}
+
+@media (min-width: $medium) {
+  .address {
+
+  }
+}
+
+@media (min-width: $large) {
+  .address {
+
+  }
+}
+/* --------------- /logo --------------- */

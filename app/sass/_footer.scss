@@ -1,0 +1,45 @@
+/* --------------- footer-info --------------- */
+.footer-info {
+  padding: 20px;
+
+  &__corp{
+    margin-bottom: 25px;
+    font-size: 16px;
+    @include font-regular;
+    letter-spacing: -.4px;
+
+    img{
+      margin-bottom: 18px;
+    }
+
+  }
+
+}
+
+@media (min-width: $small) {
+  .footer-info {
+
+  }
+}
+
+@media (min-width: $medium) {
+  .footer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 49px calc(50% - 505px) 50px;
+
+    &__corp{
+      width: 540px;
+      margin-bottom: 0;
+    }
+
+  }
+}
+
+@media (min-width: $large) {
+  .footer-info {
+
+  }
+}
+/* --------------- /logo --------------- */

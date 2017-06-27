@@ -1,0 +1,90 @@
+/* --------------- intro --------------- */
+.intro {
+  padding: 23px 20px 50px;
+  background-color: #0d0d0d;
+
+  &__img{
+    margin-bottom: 23px;
+
+    img{
+      display: block;
+      margin: 0 auto;
+    }
+
+  }
+
+  &__text{
+    margin-bottom: 25px;
+    color: #fff;
+    font-size: 18px;
+
+    h3{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      align-items: baseline;
+      margin-bottom: 39px;
+      font-size: 24px;
+      letter-spacing: 1px;
+      line-height: 30px;
+
+      img{
+        position: relative;
+        top: 10px;
+      }
+
+      span{
+        margin: 0 9px;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0;
+      }
+
+    }
+
+    p{
+      margin-bottom: 8px;
+      line-height: 25px;
+    }
+
+  }
+
+}
+
+@media (min-width: $small) {
+  .intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__img{
+      order: 1;
+      width: 303px;
+    }
+
+    &__text{
+      margin-bottom: 0;
+      order: 2;
+      width: calc( 100% - 320px );
+
+      h3{
+        font-size: 30px;
+      }
+
+    }
+
+  }
+}
+
+@media (min-width: $medium) {
+  .intro {
+    padding: 23px calc(50% - 590px) 50px;
+  }
+}
+
+@media (min-width: $large) {
+  .intro {
+
+  }
+}
+/* --------------- /logo --------------- */
